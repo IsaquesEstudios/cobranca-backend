@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        font-family: "Montserrat", sans-serif;
+        font-optical-sizing: auto;
+        text-rendering: optimizeLegibility;
+        margin: 0px;
+        padding: 0px;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      p,
+      span {
+        color: #121212;
+      }
+
+      .body {
+        width: 100%;
+        max-width: 600px;
+        padding: 60px 40px;
+        margin: auto;
+        background: #f6f6f6;
+        text-align: center;
+      }
+
+      .logo {
+        width: 100%;
+        height: 100%;
+      }
+
+      .div-logo {
+        width: 300px;
+        margin: 0 auto;
+        max-width: 300px;
+      }
+
+      .title {
+        font-size: 20px;
+        margin-top: 40px;
+        font-weight: 600;
+      }
+
+      .sub-title {
+        font-size: 16px;
+        font-weight: 500;
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+
+      .iten-debtor {
+        background-color: #e2e2e2;
+        padding: 14px;
+        text-align: start;
+        row-gap: 6px;
+      }
+
+      .description {
+        font-style: italic;
+        list-style: circle;
+        margin-bottom: 10px;
+      }
+
+      .value {
+        font-style: italic;
+      }
+
+      .contact {
+        font-size: 12px;
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body class="body">
+    <div class="div-logo">
+      <img
+        class="logo"
+        src="https://i.postimg.cc/GmY8gw9q/cinza1-1.png"
+        alt="Logo isaques estúdios"
+      />
+    </div>
+
+    <h1 class="title">Manutenção e assinatura de serviços Isaques Estúdios</h1>
+
+    <h2 class="sub-title">
+      Olá <%= name %> esta cobrança é referente os seguintes serviços:
+    </h2>
+    <div class="iten-debtor">
+      <p class="description">Descrição do serviço: <%= description %></p>
+
+      <p class="value">Valor total: <%= payment_value %></p>
+
+      <p class="value">Pagar através de: <%= link %></p>
+
+      <p class="value">Emitido dia: <%= payment_day %></p>
+      <p class="value">Pagar até: <%= payment_expiration %></p>
+    </div>
+
+    <p class="contact">
+      Caso você não tenha contratado nenhum dos nossos serviço, e essa
+      cobr​​ança seja indevida, entre em contato pelo whatsapp com o número (11)
+      98340-4368
+    </p>
+  </body>
+</html>

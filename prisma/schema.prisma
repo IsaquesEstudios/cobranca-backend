@@ -1,0 +1,53 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id            String   @id @default(auto()) @map("_id") @db.ObjectId
+  name          String
+  email         String   @unique
+  refresh_token String
+  password      String
+  updated_at    DateTime @default(now())
+  created_at    DateTime @default(now())
+}
+
+model Debtor {
+  id         String     @id @default(auto()) @map("_id") @db.ObjectId
+  name       String
+  email      String     @unique
+  services   Services[]
+  updated_at DateTime   @default(now())
+  created_at DateTime   @default(now())
+}
+
+model Services {
+  id                  String                @id @default(auto()) @map("_id") @db.ObjectId
+  title               String
+  description         String
+  value               String
+  tags                String[]
+  pay_day             Int
+  Payment_for_service Payment_for_service[]
+  debtor              Debtor?               @relation(fields: [debtor_id], references: [id])
+  debtor_id           String?               @db.ObjectId
+  updated_at          DateTime              @default(now())
+  created_at          DateTime              @default(now())
+}
+
+model Payment_for_service {
+  id             String   @id @default(auto()) @map("_id") @db.ObjectId
+  id_transaction String
+  service        Services @relation(fields: [service_Id], references: [id])
+  service_Id     String   @db.ObjectId
+  link           String
+  value          String
+  state          String
+  paid_in        DateTime
+  created_at     DateTime @default(now())
+}

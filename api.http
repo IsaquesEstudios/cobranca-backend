@@ -1,0 +1,88 @@
+POST http://localhost:3333/debtor/create
+Content-Type: application/json
+
+{
+  "name":"Matteus Isaque",
+  "email":"matteus.isaque2@gmail.com",
+  "id_payment":"123"
+}
+
+###
+
+PUT http://localhost:3333/debtor/661976dab0ffac9dbf1509ff
+Content-Type: application/json
+
+{
+  "name":"Matteus Isaque dos Santos Vieira",
+  "email":"matteus.isaque39@gmail.com",
+  "id_payment":"123",
+  "services": {
+    "service":"Teste",
+    "title":"Social Media Services",
+    "description":"Serviço nas redes socias",
+    "value":"250",
+    "pay_at":"22"
+  }
+}
+
+###
+
+GET http://localhost:3333/debtor/find-all
+Content-Type: application/json
+
+###
+
+PUT http://localhost:3333/services/6619847dfcb79010099a9622
+Content-Type: application/json
+
+{
+  "service":"afffff",
+  "value":"a1e",
+
+}
+
+###
+
+POST http://localhost:3333/user/create
+Content-Type: application/json
+
+{
+  "name":"Matteus Isaque",
+  "email":"matteus.isaque28@gmail.com",
+  "password":"foek2015@"
+}
+
+###
+
+POST http://localhost:3333/user/authenticate
+Content-Type: application/json
+
+{
+  "email":"matteus.isaque28@gmail.com",
+  "password":"foek47@"
+}
+
+###
+
+POST http://localhost:3333/signature/create
+Content-Type: application/json
+
+{
+  "title": "Manutenção de site - Elis",
+  "description": "Servidor de hospedagem + criação de postagem no blog",
+  "pay_day": 28,
+  "value": "130",
+  "tags": ["Manutenção de site"]
+}
+
+###
+
+GET  http://localhost:3333/signature/all
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiTWF0dGV1cyBJc2FxdWUiLCJlbWFpbCI6Im1hdHRldXMuaXNhcXVlMjhAZ21haWwuY29tIiwiaWF0IjoxNzE1MjY2MTQ1LCJleHAiOjE3MTY1NjIxNDV9.ccryAqkNEyxhDBpe2FjkT-j5M_j6z8P2rG0e_31RtLg
+
+
+###
+
+DELETE  http://localhost:3333/signature/delete/664299c4a2138521b9fb8d51
+Content-Type: application/json
