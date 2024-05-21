@@ -1,1 +1,1 @@
-web:npm rum dev
+web:npm start

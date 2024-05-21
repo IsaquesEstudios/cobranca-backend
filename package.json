@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "build": "tsup src --format esm",
-    "dev": "tsx watch --env-file .env src/server.ts"
+    "start": "tsx watch --env-file .env src/server.ts"
   },
   "dependencies": {
     "@fastify/cors": "^9.0.1",
