@@ -19,6 +19,7 @@ import { deleteSignature } from "./routers/signature/delete-signature";
 import { middlewareAuth } from "./middleware/authenticated";
 
 const app = fastify();
+
 app.register(fastifyJWT, {
   secret: `${process.env.TOKEN}`,
 });
