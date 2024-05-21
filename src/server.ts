@@ -43,6 +43,6 @@ app.register(findAllDebtor);
 
 app.register(createUser);
 
-app.listen({ port: 3333, host: "0.0.0.0" }).then(() => {
+app.listen({ port: 3333 || process.env.PORT, host: "0.0.0.0" }).then(() => {
   console.log("HTTP Server running");
 });
