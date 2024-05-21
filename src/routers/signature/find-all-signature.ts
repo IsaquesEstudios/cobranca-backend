@@ -22,7 +22,6 @@ export async function findAllSignature(app: FastifyInstance) {
     .withTypeProvider<ZodTypeProvider>()
     .get(
       "/signature/all",
-      // { preHandler: [middlewareAuth] },
       async (request, reply) => {
         try {
           const findSignature = await prisma.services.findMany({
